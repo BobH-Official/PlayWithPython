@@ -1,20 +1,22 @@
 # PlayWithPython
+
 2020 春节太无聊，尝试一下python。
 
->项目零：`python`基础
+> Proj-0：`python`基础(NOT DONE)
 >
-> 项目一：`python`图片爬虫（爬取必应桌面）
+> Proj-1：`python`图片爬虫（爬取必应桌面）(DONE)
 >
-> 项目二：在`python`里使用`ffmpeg`及终端命令行
+> Proj-2：在`python`里使用`ffmpeg`及终端命令行(DONE)
 >
-> 项目三：在`Swift`里使用`python`
+> Proj-3：在`Swift`里使用`python`(NOT DONE)
 >
->项目四：在 iOS app 里使用`python`
+> Proj-4：在 iOS app 里使用`python`(NOT DONE)
 
 
 ## Get Started
 
 ### 环境
+
 电脑：
 > MacBook Pro (13-inch, 2017, Four Thunderbolt 3 Ports)
 >
@@ -35,11 +37,12 @@
 > [Clang 6.0 (clang-600.0.57)] on darwin
 
 ### 安装Python
+
 从官网上下载：
 
-https://www.python.org/downloads/
+[https://www.python.org/downloads/](https://www.python.org/downloads/)
 
-> 下载最新版 `python3` 就好，⚠️注意 `python3` 和 `python2` 不一样，本文全部使用 `python3` 。（注：macOS自带`python2`，但不是最新版）
+> 下载最新版 `python3` 就好，⚠️注意 `python3` 和 `python2` 不一样，本文全部使用 `python3` 。（注：macOS自带`python2`，但也不是最新版）
 
 <img src="/img_python_download.png" alt="img_python_download" style="zoom:60%;" />
 
@@ -50,11 +53,12 @@ https://www.python.org/downloads/
 > `python3` 自带了`pip3`，不用在另外下载。
 
 ```
-# 项目零
-pip3 install lxml
-pip3 install requests
-# 项目一
-pip3 install ffmpy3
+# Proj-1
+$ pip3 install lxml
+$ pip3 install requests
+
+# Proj-2
+$ pip3 install ffmpy3
 ```
 
 ### 编辑及运行
@@ -63,8 +67,8 @@ pip3 install ffmpy3
 
 <img src="/img_xcode_with_terminal.pn" alt="img_xcode_and_terminal" />
 
-> 当然，你也可以选择PyCharm、VSCode或者Vim。（文本编辑也行哟，如果你喜欢）
+> 当然，你也可以按照自己的爱好，选择PyCharm、VSCode或者Vim。（文本编辑也行哟，如果你喜欢）
 
 
 ## LICENSE
-Apache 2.0
+Apache License 2.0
