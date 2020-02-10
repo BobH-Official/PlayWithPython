@@ -1,4 +1,4 @@
-# PlayWithPython
+# Play With Python
 
 2020 春节太无聊，尝试一下python。
 
@@ -44,7 +44,7 @@
 
 > 下载最新版 `python3` 就好，⚠️注意 `python3` 和 `python2` 不一样，本文全部使用 `python3` 。（注：macOS自带`python2`，但也不是最新版）
 
-<img src="/img_python_download.png" alt="img_python_download" style="zoom:60%;" />
+<img src="https://github.com/unouprimeOder/PlayWithPython/blob/master/img/img_python_download.png" style="zoom:60%;" />
 
 ### 安装库
 
@@ -65,7 +65,7 @@ $ pip3 install ffmpy3
 
 我选用 Xcode 编辑 + Terminal 运行的方式。
 
-<img src="/img_xcode_with_terminal.pn" alt="img_xcode_and_terminal" />
+<img src="https://github.com/unouprimeOder/PlayWithPython/blob/master/img/img_xcode_and_terminal.png" />
 
 > 当然，你也可以按照自己的爱好，选择PyCharm、VSCode或者Vim。（文本编辑也行哟，如果你喜欢）
 
