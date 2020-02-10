@@ -1,11 +1,12 @@
 #!/usr/local/bin/python3
-# -*- coding: UTF-8 -*-
+#-*- coding: UTF-8 -*-
 #
-#  bingwallpapers.py
-#  Python初探  ——寒假研究性学习
+#  bingWallpapers.py
+#  https://github.com/unouprimeOder/PlayWithPython
+#  https://github.com/unouprimeOder/PlayWithPython/blob/master/Proj-1/bingWallpapers.py
 #
-#  Created by UnouprimeOder on 20200125.
-#  Copyright © 2020 UnouprimeOder. All rights reserved.
+#  Created by unouprimeOder on 20200125.
+#  Copyright © 2020 unouprimeOder. All rights reserved.
 #
 
 import requests
@@ -24,6 +25,7 @@ log = open(logPath, 'a')
 # 开头写一些分隔符
 log.write('#############################################\n')
 log.write(time.strftime('%Y-%m-%d %a. %H:%M:%S',time.localtime(time.time())))
+log.write('\n')
 log.write('#############################################\n')
 # MARK: Save Log
 def logprint(text):
@@ -93,6 +95,7 @@ def saveImage(imgUrl, path, imgName):
 
 # MARK:  Start
 logprint('@@@@@@START@@@@@@')
+print(time.strftime('%Y-%m-%d %a. %H:%M:%S',time.localtime(time.time())))
 
 for i in range(1, 121):
     # 创建当前页面URL
@@ -102,7 +105,7 @@ for i in range(1, 121):
     # 判断是不是timeout
     if page == 'timeout':
         logprint('>>>>!!!!!!!BROKEN!!!!!!!\n>>>>{}\n>>>>!!!!!!!BROKEN!!!!!!!'.format(url))
-        log.write(time.strftime('%Y-%m-%d %a. %H:%M:%S',time.localtime(time.time())))
+        logprint(time.strftime('%Y-%m-%d %a. %H:%M:%S',time.localtime(time.time())))
     else:
         # 获取页面信息
         dataUrl = getInfoUrl(page)
@@ -132,5 +135,5 @@ for i in range(1, 121):
             time.sleep(5)
 
 # MARK:  OVER
+logprint(time.strftime('%Y-%m-%d %a. %H:%M:%S',time.localtime(time.time())))
 logprint('@@@@@@OVER@@@@@@')
-log.write(time.strftime('%Y-%m-%d %a. %H:%M:%S',time.localtime(time.time())))
