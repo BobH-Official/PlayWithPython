@@ -31,7 +31,7 @@ for i in range(1,121):
 
 敲黑板，这是重点！（毕竟我们是来下载图片的嘛）
 
-<img src="https://github.com/unouprimeOder/PlayWithPython/blob/master/Proj-1/img/img_xpath_of_pic_url.png" alt="img_xpath_of_pic_url.png" />
+<img src="https://github.com/unouprimeOder/PlayWithPython/blob/master/Proj-1/img/img_xpath_of_pic_url.png" />
 
 这个时候我们可以引用一句数学老师们最讨厌的话
 
@@ -58,9 +58,9 @@ url_of_pictures = '/html/body/div[3]/div/div/img/@src'
 ```
 再看其他内容的XPath：
 
-<img src="https://github.com/unouprimeOder/PlayWithPython/blob/master/Proj-1/img/img_xpath_of_pic_name_and_copyright.png" alt="img_xpath_of_pic_name_and_copyright.png" />
+<img src="https://github.com/unouprimeOder/PlayWithPython/blob/master/Proj-1/img/img_xpath_of_pic_name_and_copyright.png" />
 
-<img src="https://github.com/unouprimeOder/PlayWithPython/blob/master/Proj-1/img/img_xpath_of_pic_date.png" alt="img_xpath_of_pic_date.png" />
+<img src="https://github.com/unouprimeOder/PlayWithPython/blob/master/Proj-1/img/img_xpath_of_pic_date.png" />
 
 这是我们在用一句数学老师们最喜欢的话
 
@@ -75,7 +75,7 @@ xpath_of_date = '/html/body/div[3]/div/div/div[1]/p[1]/em/text()'
 
 **右键⇒Copy⇒Copy XPath**
 
-<img src="https://github.com/unouprimeOder/PlayWithPython/blob/master/Proj-1/img/img_copy_xpath.png" alt="img_copy_xpath.png" />
+<img src="https://github.com/unouprimeOder/PlayWithPython/blob/master/Proj-1/img/img_copy_xpath.png" />
 
 > 综上所述：
 
@@ -229,7 +229,7 @@ def saveImage(imgUrl, path, imgName):
 
 可是现实是残酷的。
 
-仔细观察发现，copyright 里面竟然有个`/`，仔细去访达里看看，<img src="https://github.com/unouprimeOder/PlayWithPython/blob/master/Proj-1/img/img_slash.png" alt="png" style="zoom:35%;" /> ，访达怎么会支持这种东东！？
+仔细观察发现，copyright 里面竟然有个`/`，仔细去访达里看看，<img src="https://github.com/unouprimeOder/PlayWithPython/blob/master/Proj-1/img/img_slash.png" style="zoom:35%;" /> ，访达怎么会支持这种东东！？
 
 拷贝路径发现，它原来长这样`./bing:wallpapers.py`，再去访达里把文件命名为`:`，你会神奇的发现这是非法操作。
 
@@ -252,8 +252,7 @@ for x in name:
 现在运行就应该是OK👌的了。
 
 ### 大功告成
-至此，第零个项目就结束了。
-[完整代码](https://github.com/unouprimeOder/PlayWithPython/blob/master/Proj-1/bingWallpapers.py)
+至此，第一个项目就结束了。[完整代码](https://github.com/unouprimeOder/PlayWithPython/blob/master/Proj-1/bingWallpapers.py)
 
 
 
