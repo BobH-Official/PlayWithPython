@@ -114,20 +114,20 @@ import os #调用系统功能
 root = os.getcwd() + '/' # 这里加上’/‘是为了后面方便
 ```
 
-手动储存log，我喜欢这么做，方便日后查看失败的请求
+> 手动储存log，我喜欢这么做，方便日后查看失败的请求
 
-```python
-logPath = root + 'log.txt'
-log = open(logPath, 'a') # 我用续写模式，也可也用'w'
-# 开头写一些分隔符
-log.write('#############################################\n')
-log.write(time.strftime('%Y-%m-%d %a. %H:%M:%S',time.localtime(time.time()))) # 写入时间
-log.write('#############################################\n')
-
-def logprint(text):
-    print(text)
-    log.write(text + '\n')
-```
+>```python
+>logPath = root + 'log.txt'
+>log = open(logPath, 'a') # 我用续写模式，也可也用'w'
+># 开头写一些分隔符
+>log.write('#############################################\n')# 
+>log.write(time.strftime('%Y-%m-%d %a. %H:%M:%S',time.localtime(time.time()))) # 写入时间
+>log.write('#############################################\n')
+>
+>def logprint(text):
+>print(text)
+>log.write(text + '\n')
+>```
 
 主体代码
 
@@ -252,4 +252,4 @@ for x in name:
 
 ### 大功告成
 
-至此，第一个项目就结束了。[完整代码](https://github.com/unouprimeOder/PlayWithPython/blob/master/Proj-1/bingWallpapers.py)
+至此，第一个项目就结束了。<a src="https://github.com/unouprimeOder/PlayWithPython/blob/master/Proj-1/bingWallpapers.py">完整代码</a>
