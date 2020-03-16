@@ -71,9 +71,9 @@ xpath_of_name = '/html/body/div[3]/div/div/div[1]/h3/text()'
 xpath_of_date = '/html/body/div[3]/div/div/div[1]/p[1]/em/text()'
 ```
 ------
-如果你没有`由图知`的能力，以下是获取 XPath 的正经方法：
+如果你没有`由图知`的能力，这里是获取 XPath 的正经方法：
 
-**右键⇒Copy⇒Copy XPath**
+##### **`右键⇒Copy⇒Copy XPath`**
 
 <img src="https://github.com/unouprimeOder/PlayWithPython/blob/master/Proj-1/img/img_copy_xpath.png" />
 
@@ -85,14 +85,14 @@ xpath_of_name = '/html/body/div[3]/div/div/div[1]/h3/text()'
 xpath_of_date = '/html/body/div[3]/div/div/div[1]/p[1]/em/text()'
 ```
 > 删去了迭代的部分，etree 会帮我们自动迭代，也不需要用for-in
-> 但是它会迭代所有内容，你可以用以下方式自定义范围
+> Etree 会迭代所有内容，你可以用以下方式自定义范围
 
 > ```python
 > for i in range(1,8):
 >     xpaths_of_pictures_url = '/html/body/div[3]/div[{}]/div/img/@src'.format(i)
->     xpaths_of_name = '/html/body/div[3]/div[{}]/div/div[1]/h3/text()'
->     xpaths_of_date = '/html/body/div[3]/div[{}]/div/div[1]/p[1]/em/text()'
-> # 传给 etree.xpath() 的只能是字符，所以就用这种方式了。
+>     xpaths_of_name = '/html/body/div[3]/div[{}]/div/div[1]/h3/text()'.format(i)
+>     xpaths_of_date = '/html/body/div[3]/div[{}]/div/div[1]/p[1]/em/text()'.format(i)
+> # 传给 etree.xpath() 的只能是String.
 > ```
 
 ### 开始CODE
@@ -108,20 +108,20 @@ import time #用于暂停一段时间
 import os #调用系统功能
 ```
 
-获取当前工作路径：
+获取当前工作路径，用于保存文件：
 
 ```python
 root = os.getcwd() + '/' # 这里加上’/‘是为了后面方便
 ```
 
-储存log，我喜欢这么做，方便日后查看失败的请求
+手动储存log，我喜欢这么做，方便日后查看失败的请求
 
 ```python
 logPath = root + 'log.txt'
 log = open(logPath, 'a') # 我用续写模式，也可也用'w'
 # 开头写一些分隔符
 log.write('#############################################\n')
-log.write(time.strftime('%Y-%m-%d %a. %H:%M:%S',time.localtime(time.time()))) # 顺便写入时间
+log.write(time.strftime('%Y-%m-%d %a. %H:%M:%S',time.localtime(time.time()))) # 写入时间
 log.write('#############################################\n')
 
 def logprint(text):
@@ -137,15 +137,14 @@ for i in range(1, 121):
     url = 'https://bing.ioliu.cn/?p={}'.format(i)
     # 获取页面
     page = getPageHTML(url)
-    # 判断是不是timeout
+    # 判断是不是timeout//函数抛出'timeout'
     if page == 'timeout':
-        logprint('>>>>!!!!!!!BROKEN!!!!!!!\n>>>>{}\n>>>>!!!!!!!BROKEN!!!!!!!'.format(url))
-        log.write(time.strftime('%Y-%m-%d %a. %H:%M:%S',time.localtime(time.time())))
+        logprint('>>>>!!!!!!!BROKEN!!!!!!!\n>>>>{}\n>>>>{}\n>>>>!!!!!!!BROKEN!!!!!!!'.format(url, time.strftime('%Y-%m-%d %a. %H:%M:%S',time.localtime(time.time()))))
     else:
         # 获取页面信息
-        dataUrl = getInfoUrl(page) # return string
-        dataName = getInfoName(page) # return list
-        dataDate = getInfoDate(page) # return list
+        dataUrl = getInfoUrl(page) # get a string
+        dataName = getInfoName(page) # get a list
+        dataDate = getInfoDate(page) # get a list
         #依次获取12张图片
         for s in range(0, 12):
             # 读取图片信息
