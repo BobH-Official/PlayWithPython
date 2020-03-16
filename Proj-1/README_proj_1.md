@@ -31,7 +31,9 @@ for i in range(1,121):
 
 敲黑板，这是重点！（毕竟我们是来下载图片的嘛）
 
-<img src="https://github.com/unouprimeOder/PlayWithPython/blob/master/Proj-1/img/img_xpath_of_pic_url.png" />
+`<img src="https://github.com/unouprimeOder/PlayWithPython/blob/master/Proj-1/img/img_xpath_of_pic_url.png" />`
+
+![img_xpath_of_pic_url](./img/img_xpath_of_pic_url.png)
 
 这个时候我们可以引用一句数学老师们最讨厌的话
 
