@@ -2,15 +2,16 @@
 
 2020年 春节太无聊，尝试一下python。
 
-> [ ] Proj-0：`python`基础
 >
-> [x] Proj-1：`python`图片爬虫（爬取必应桌面）
->
-> [x] Proj-2：在`python`里使用`ffmpeg`及终端命令行
->
-> [ ] Proj-3：在`Swift`里使用`python`
->
-> [ ] Proj-4：在 iOS app 里使用`python`
+> - [ ] Proj-0：`python`基础
+> 
+> - [x] Proj-1：`python`图片爬虫（爬取必应桌面）
+> 
+> - [x] Proj-2：在`python`里使用`ffmpeg`及终端命令行
+> 
+> - [ ] Proj-3：在`Swift`里使用`python`
+> 
+> - [ ] Proj-4：在 iOS app 里使用`python`
 
 
 ## Get Started
