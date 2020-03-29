@@ -41,7 +41,7 @@
 
 从官网上下载：
 
-[https://www.python.org/downloads/](https://www.python.org/downloads/)
+<a href="https://www.python.org/downloads/">https://www.python.org/downloads/</a>
 
 > 下载最新版 `python3` 就好，⚠️注意 `python3` 和 `python2` 不一样，本文全部使用 `python3` 。（注：macOS自带`python2`，但也不是最新版）
 
