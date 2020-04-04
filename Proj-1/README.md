@@ -31,7 +31,7 @@ for i in range(1,121):
 
 敲黑板，这是重点！（毕竟我们是来下载图片的嘛）
 
-<img src="./img/img_xpath_of_pic_url.png"/>
+<img src="./img/img_xpath_of_pic_url.png" />
 
 这个时候我们可以引用一句数学老师们最讨厌的话
 
@@ -62,7 +62,7 @@ url_of_pictures = '/html/body/div[3]/div/div/img/@src'
 
 <img src="./img/img_xpath_of_pic_date.png"/>
 
-这是我们在用一句数学老师们最喜欢的话
+这是我们在用一句学生们们最喜欢的话：
 
 > 同理可得：
 
@@ -73,7 +73,7 @@ xpath_of_date = '/html/body/div[3]/div/div/div[1]/p[1]/em/text()'
 ------
 如果你没有`由图知`的能力，这里是获取 XPath 的正经方法：
 
-##### **`右键⇒Copy⇒Copy XPath`**
+##### **`右键 ⇒ 'Copy' ⇒ 'Copy XPath'`**
 
 <img src="./img/img_copy_xpath.png"/>
 
@@ -102,16 +102,16 @@ xpath_of_date = '/html/body/div[3]/div/div/div[1]/p[1]/em/text()'
 首先，我们来一点`import` ：
 
 ```python
-import requests #获取文件
-from lxml import etree #分析HTML
-import time #用于暂停一段时间
-import os #调用系统功能
+import requests # 获取文件
+from lxml import etree # 分析HTML
+import time # 用于暂停一段时间
+import os # 调用系统功能
 ```
 
 获取当前工作路径，用于保存文件：
 
 ```python
-root = os.getcwd() + '/' # 这里加上’/‘是为了后面方便
+root = os.getcwd() + '/'  # 这里加上’/‘是为了后面方便
 ```
 
 > 手动储存log，我喜欢这么做，方便日后查看失败的请求
@@ -239,17 +239,15 @@ name = dataDate[s] + '_[' + dataName[s] + '].jpeg'
 # 处理名字里的不合法字符
 imgName = ''
 for x in name:
-	if not x == '\s' and not x == '/' and not x == '©':
+	if not x == '/' and not x == '©':
 		imgName = imgName + x
-	if x == '\s': # 免得有其他麻烦，一律换成空格
-		imgName = imgName + '\u0020'
-	if x == '/':
+	elif x == '/':
 		imgName = imgName + '\\'
-	if x == '©':
+	elif x == '©':
         imgName = imgName + '(c)'
 ```
 现在运行就应该是OK👌的了。
 
 ### 大功告成
 
-至此，第一个项目就结束了。<a src="https://github.com/unouprimeOder/PlayWithPython/blob/master/Proj-1/bingWallpapers.py">完整代码</a>
+至此，第一个项目就结束了。在这里查看<a src="./bingWallpapers.py">完整代码</a>。
