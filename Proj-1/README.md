@@ -29,11 +29,11 @@ for i in range(1,121):
 
 #### 图片链接、名称及版权、日期
 
-敲黑板，这是重点！（毕竟我们是来下载图片的嘛）
+**敲黑板，这是重点！**（毕竟我们是来下载图片的嘛）
 
 <img src="./img/img_xpath_of_pic_url.png" />
 
-这个时候我们可以引用一句数学老师们最讨厌的话
+这个时候我们可以引用一句数学老师们最讨厌的话：
 
 > 由图知：
 
@@ -62,7 +62,7 @@ url_of_pictures = '/html/body/div[3]/div/div/img/@src'
 
 <img src="./img/img_xpath_of_pic_date.png"/>
 
-这是我们在用一句学生们们最喜欢的话：
+这时我们再引用一句学生们们最喜欢的话：
 
 > 同理可得：
 
@@ -95,11 +95,11 @@ xpath_of_date = '/html/body/div[3]/div/div/div[1]/p[1]/em/text()'
 > # 传给 etree.xpath() 的只能是String.
 > ```
 
-### 开始CODE
+<h3>开始CODE</h3>
 
 终于到上代码的时间了！🎉
 
-首先，我们来一点`import` ：
+首先，我们来一点<code>import</code>：
 
 ```python
 import requests # 获取文件
