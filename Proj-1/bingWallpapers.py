@@ -9,11 +9,12 @@
 #  Copyright © 2020 unouprimeOder. All rights reserved.
 #
 
-import requests
-from lxml import etree
+import os
 import random
 import time
-import os
+
+import requests
+from lxml import etree
 
 # MARK: - Root Path
 root = os.getcwd() + '/'
@@ -27,16 +28,13 @@ log.write('#############################################\n')
 log.write(time.strftime('%Y-%m-%d %a. %H:%M:%S', time.localtime(time.time())))
 log.write('\n')
 log.write('#############################################\n')
+
 # MARK: Save Log
-
-
 def logprint(text):
     print(text)
     log.write(text + '\n')
 
 # MARK: - Get Page HTML
-
-
 def getPageHTML(url, triedNum=0, sleepTime=5, tryNum=20):
     logprint('>>>>正在访问: {}'.format(url))
     # 获取页面

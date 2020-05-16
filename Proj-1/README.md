@@ -125,8 +125,8 @@ root = os.getcwd() + '/'  # 这里加上’/‘是为了后面方便
 >log.write('#############################################\n')
 >
 >def logprint(text):
->print(text)
->log.write(text + '\n')
+>	print(text)
+>	log.write(text + '\n')
 >```
 
 主体代码

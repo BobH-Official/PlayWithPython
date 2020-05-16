@@ -46,7 +46,6 @@ def getPageHTML(url, triedNum=0, sleepTime=5, tryNum=20):
             logprint('>>>>重新访问: '+url+' : '+str(triedNum))
             triedNum = triedNum + 1
             getPageHTML(url=url, triedNum=triedNum, tryNum=tryNum)
-        else:
             logprint('>>>>尝试 {} 次无效'.format(tryNum))
     return data
 
